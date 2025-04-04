@@ -13,6 +13,8 @@ app = Flask(__name__)
 
 # Initialize model
 model = VolatilityModel()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
 
 # Check if model exists, if not, train it
 if not os.path.exists('volatility_model.pkl'):
